@@ -1,7 +1,8 @@
 import { Vue } from 'vue/types/vue';
+import { NotificationInterfaces } from './interfaces';
 
 interface VueMeteorErrorNotificationOptions {
-    notifier: 'native' | 'buefy' | 'sweetalert2';
+    notifier: NotificationInterfaces;
 }
 
 export default {
