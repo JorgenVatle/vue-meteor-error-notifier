@@ -38,15 +38,23 @@ export default class ErrorNotifier {
      * Emit SweetAlert notification for the current error.
      */
     public sweetalert2() {
-        // @ts-ignore
-        this.vue.$swal({
+        const messages = this.error.messages;
+        const options: any = {
             type: 'error',
             toast: true,
             position: 'top-end',
             showConfirmButton: false,
             timer: 5000,
-            message: this.error.messages.join('\n,'),
-        })
+            titleText: messages[0],
+        };
+
+        if (messages.length > 1) {
+            options.titleText = 'Oops!';
+            options.text = this.error.messages.join('\n,');
+        }
+
+        // @ts-ignore
+        this.vue.$swal(options)
     }
 
     /**
