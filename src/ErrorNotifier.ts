@@ -2,6 +2,12 @@ import ErrorFormatter from './ErrorFormatter';
 import { Vue } from 'vue/types/vue';
 import { MeteorError, NotificationInterfaces } from './interfaces';
 
+interface AvailableInterfaces {
+    buefy: boolean,
+    alert: boolean,
+    sweetalert2: boolean,
+}
+
 export default class ErrorNotifier {
 
     /**
@@ -76,5 +82,16 @@ export default class ErrorNotifier {
             // @ts-ignore
             buefy: typeof vue.$toast === 'object',
         }
+    }
+
+    /**
+     * Check if the given notification interface is available.
+     *
+     * @param vue
+     * @param notifier
+     */
+    public static isAvailable(vue: typeof Vue, notifier: ErrorNotifier): boolean {
+        // @ts-ignore
+        return this.availableInterfaces(vue)[notifier];
     }
 }
