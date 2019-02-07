@@ -13,6 +13,7 @@ npm install vue-meteor-error-notifier
 import Vue from 'vue';
 import VueMeteorErrorNotifier from 'vue-meteor-error-notifier';
 
+// Make sure this is placed after Vue.use(Buefy) or Vue.use(VueSweetalert2)
 Vue.use(VueMeteorErrorNotifier, {
     notifier: 'sweetalert2' // Can be one of 'native', 'sweetalert2' or 'buefy'
 });
