@@ -1,0 +1,27 @@
+{
+  "name": "vue-meteor-error-notifier",
+  "version": "1.0.0",
+  "description": "User friendly error notifications from Meteor error objects",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgenVatle/vue-meteor-error-notifier.git"
+  },
+  "keywords": [
+    "Meteor",
+    "Sweetalert",
+    "Vue",
+    "Buefy",
+    "error",
+    "notifications"
+  ],
+  "author": "Jørgen Vatle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JorgenVatle/vue-meteor-error-notifier/issues"
+  },
+  "homepage": "https://github.com/JorgenVatle/vue-meteor-error-notifier#readme"
+}
