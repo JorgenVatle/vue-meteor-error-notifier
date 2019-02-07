@@ -36,6 +36,15 @@ export default {
 }
 ```
 
+## Notification Interfaces
+Errors can be emitted using either native `alert()` notifications, or using a pre-existing notification library like the
+[Toast](https://buefy.github.io/documentation/toast/) notifications bundled with Buefy or 
+[Sweetalert](https://sweetalert2.github.io/)'s Toast notifications.
+
+As native `alert()` notifications blocks the user interface until input is received from the user, I'd recommend
+using installing (if not already installed) either [Buefy](https://buefy.github.io/#/) or 
+[Vue-Sweetalert2](https://github.com/avil13/vue-sweetalert2)
+
 ## License
 This repository is licensed under the ISC license.
 
