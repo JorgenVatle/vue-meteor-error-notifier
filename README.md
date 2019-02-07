@@ -26,7 +26,8 @@ export default {
         someVueMethod() {
             Meteor.call('some.meteor.method', (err, resp) => {
                 if (err) {
-                    return this.$notifyError(err); // Formats and spits out a user friendly error notification
+                    this.$notifyError(err); // Formats and spits out a user friendly error notification
+                    return;
                 }
                
                 // Continue method here
