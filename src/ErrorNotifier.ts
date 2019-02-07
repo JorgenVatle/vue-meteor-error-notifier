@@ -2,11 +2,7 @@ import ErrorFormatter from './ErrorFormatter';
 import { Vue } from 'vue/types/vue';
 import { MeteorError, NotificationInterfaces } from './interfaces';
 
-interface AvailableInterfaces {
-    ['buefy']: boolean,
-    ['native']: boolean,
-    ['sweetalert2']: boolean,
-}
+type AvailableInterfaces = { [ k in NotificationInterfaces ]: boolean }
 
 export default class ErrorNotifier {
 
