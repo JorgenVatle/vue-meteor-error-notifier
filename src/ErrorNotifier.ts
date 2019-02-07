@@ -34,7 +34,7 @@ export default class ErrorNotifier {
     /**
      * Emit SweetAlert notification for the current error.
      */
-    public sweetalert() {
+    public sweetalert2() {
         // @ts-ignore
         this.vue.$swal({
             type: 'error',
