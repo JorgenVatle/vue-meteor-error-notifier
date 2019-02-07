@@ -2,6 +2,7 @@
   "name": "vue-meteor-error-notifier",
   "version": "1.0.0",
   "description": "User friendly error notifications from Meteor error objects",
+  "types":"dist/index.d.ts",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
