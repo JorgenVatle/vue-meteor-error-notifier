@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/JorgenVatle/vue-meteor-error-notifier/issues"
   },
-  "homepage": "https://github.com/JorgenVatle/vue-meteor-error-notifier#readme"
+  "homepage": "https://github.com/JorgenVatle/vue-meteor-error-notifier#readme",
+  "dependencies": {
+    "vue": "^2.6.3"
+  }
 }
