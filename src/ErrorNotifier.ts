@@ -27,14 +27,14 @@ export default class ErrorNotifier {
     /**
      * Emit native error notification for the current error.
      */
-    public notifyNative() {
+    public native() {
         alert(this.error.messages.join('\n'));
     }
 
     /**
      * Emit SweetAlert notification for the current error.
      */
-    public notifySweetalert() {
+    public sweetalert() {
         // @ts-ignore
         this.vue.$swal({
             type: 'error',
@@ -49,7 +49,7 @@ export default class ErrorNotifier {
     /**
      * Emit a Buefy notification for the current error.
      */
-    public notifyBuefy() {
+    public buefy() {
         this.error.messages.forEach((message: string) => {
             // @ts-ignore
             this.vue.$toast.open({
