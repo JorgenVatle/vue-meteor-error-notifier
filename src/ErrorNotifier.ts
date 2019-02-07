@@ -14,7 +14,7 @@ export default class ErrorNotifier {
     /**
      * Vue instance.
      */
-    vue: typeof Vue;
+    vue: Vue;
 
     /**
      * Error Notifier constructor.
@@ -24,7 +24,7 @@ export default class ErrorNotifier {
      */
     constructor(error: MeteorError, vue: typeof Vue) {
         this.error = new ErrorFormatter(error);
-        this.vue = vue;
+        this.vue = new vue();
     }
 
     /**
