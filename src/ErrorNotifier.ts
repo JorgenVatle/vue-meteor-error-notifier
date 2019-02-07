@@ -74,7 +74,7 @@ export default class ErrorNotifier {
      */
     public static availableInterfaces(vue: typeof Vue): AvailableInterfaces {
         return {
-            alert: typeof alert === 'function',
+            native: typeof alert === 'function',
 
             // @ts-ignore
             sweetalert2: typeof vue.$swal === 'function',
