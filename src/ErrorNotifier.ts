@@ -1,5 +1,6 @@
-import ErrorFormatter, { MeteorError } from './ErrorFormatter';
+import ErrorFormatter from './ErrorFormatter';
 import { Vue } from 'vue/types/vue';
+import { MeteorError } from './interfaces';
 
 export default class ErrorNotifier {
 
