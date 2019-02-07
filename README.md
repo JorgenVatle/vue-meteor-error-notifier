@@ -17,3 +17,20 @@ Vue.use(VueMeteorErrorNotifier, {
     notifier: 'sweetalert2' // Can be one of 'native', 'sweetalert2' or `buefy`
 });
 ```
+
+## Use
+```js
+export default {
+    methods: {
+        someVueMethod() {
+            Meteor.call('some.meteor.method', (err, resp) => {
+                if (err) {
+                    return this.$notifyError(err); // Formats and spits out a user friendly error notification
+                }
+               
+                // Continue method here
+            });
+        }
+    }
+}
+```
