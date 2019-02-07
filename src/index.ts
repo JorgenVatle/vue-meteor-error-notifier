@@ -1,3 +1,5 @@
+import { Vue } from 'vue/types/vue';
+
 interface MeteorError {
     error: {
         /**
@@ -19,5 +21,15 @@ interface MeteorError {
          * Error type
          */
         errorType: string,
+    }
+}
+
+interface VueMeteorErrorNotificationOptions {
+    notifier: 'native' | 'buefy' | 'sweetalert2';
+}
+
+export default {
+    install(Vue: Vue, { notifier = 'native' }: VueMeteorErrorNotificationOptions) {
+
     }
 }
