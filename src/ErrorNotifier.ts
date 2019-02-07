@@ -72,7 +72,7 @@ export default class ErrorNotifier {
     /**
      * Available notification interfaces.
      */
-    public static availableInterfaces(vue: typeof Vue) {
+    public static availableInterfaces(vue: typeof Vue): AvailableInterfaces {
         return {
             alert: typeof alert === 'function',
 
