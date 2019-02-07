@@ -25,7 +25,7 @@ export default class ErrorFormatter {
     /**
      * Meteor error object
      */
-    private error: MeteorError;
+    private exception: MeteorError;
 
     /**
      * Error formatter constructor
@@ -33,7 +33,21 @@ export default class ErrorFormatter {
      * @param meteorError
      */
     constructor(meteorError: MeteorError) {
-        this.error = meteorError;
+        this.exception = meteorError;
+    }
+
+    /**
+     * Error reason
+     */
+    public get reason() {
+        return this.exception.reason;
+    }
+
+    /**
+     * User friendly error message.
+     */
+    public get message() {
+        return this.reason || `Unexpected error occurred! [${this.exception.error}]`;
     }
 
 }
