@@ -90,8 +90,7 @@ export default class ErrorNotifier {
      * @param vue
      * @param notifier
      */
-    public static isAvailable(vue: typeof Vue, notifier: ErrorNotifier): boolean {
-        // @ts-ignore
+    public static isAvailable(vue: typeof Vue, notifier: NotificationInterfaces): boolean {
         return this.availableInterfaces(vue)[notifier];
     }
 }
