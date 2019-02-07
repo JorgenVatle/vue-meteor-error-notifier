@@ -14,7 +14,7 @@ import Vue from 'vue';
 import VueMeteorErrorNotifier from 'vue-meteor-error-notifier';
 
 Vue.use(VueMeteorErrorNotifier, {
-    notifier: 'sweetalert2' // Can be one of 'native', 'sweetalert2' or `buefy`
+    notifier: 'sweetalert2' // Can be one of 'native', 'sweetalert2' or 'buefy'
 });
 ```
 
