@@ -65,4 +65,13 @@ export default class ErrorFormatter {
         return this.reason || `Unexpected error occurred! [${this.exception.error}]`;
     }
 
+    /**
+     * Collection of error messages for the current error.
+     */
+    public get messages() {
+        return this.formErrors.length
+            ? this.formErrors
+            : [this.message];
+    }
+
 }
