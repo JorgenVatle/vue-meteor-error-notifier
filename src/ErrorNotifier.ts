@@ -1,6 +1,6 @@
 import ErrorFormatter from './ErrorFormatter';
 import { Vue } from 'vue/types/vue';
-import { MeteorError } from './interfaces';
+import { MeteorError, NotificationInterfaces } from './interfaces';
 
 export default class ErrorNotifier {
 
@@ -12,7 +12,7 @@ export default class ErrorNotifier {
     /**
      * Vue instance.
      */
-    vue: Vue;
+    vue: typeof Vue;
 
     /**
      * Error Notifier constructor.
@@ -20,7 +20,7 @@ export default class ErrorNotifier {
      * @param error
      * @param vue
      */
-    constructor(error: MeteorError, vue: Vue) {
+    constructor(error: MeteorError, vue: typeof Vue) {
         this.error = new ErrorFormatter(error);
         this.vue = vue;
     }
