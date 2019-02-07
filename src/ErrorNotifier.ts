@@ -62,4 +62,16 @@ export default class ErrorNotifier {
             })
         });
     }
+
+    /**
+     * Available notification interfaces.
+     */
+    public get availableInterfaces() {
+        return {
+            // @ts-ignore
+            sweetalert2: typeof this.vue.$swal === 'function',
+            buefy: typeof this.vue.$toast === 'object',
+            alert: typeof alert === 'function',
+        }
+    }
 }
