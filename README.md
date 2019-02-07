@@ -43,7 +43,8 @@ Errors can be emitted using either native `alert()` notifications, or using a pr
 
 As native `alert()` notifications blocks the user interface until input is received from the user, I'd recommend
 using installing (if not already installed) either [Buefy](https://buefy.github.io/#/) or 
-[Vue-Sweetalert2](https://github.com/avil13/vue-sweetalert2)
+[Vue-Sweetalert2](https://github.com/avil13/vue-sweetalert2). Then specify the interface you want to use in the 
+[`Vue.use()`](https://github.com/JorgenVatle/vue-meteor-error-notifier#import) options specified above.
 
 ## License
 This repository is licensed under the ISC license.
