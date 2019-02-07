@@ -6,7 +6,7 @@ interface VueMeteorErrorNotificationOptions {
     notifier: NotificationInterfaces;
 }
 
-const warn = (message) => {
+const warn = (message: string) => {
     console.warn('[VueMeteorErrorNotifier]', message);
 };
 
