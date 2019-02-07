@@ -23,7 +23,7 @@ export default {
 
         if (!ErrorNotifier.isAvailable(vue, notifier)) {
             warn(
-                'The notification interface you specified is not available, or isn\'t being included before\n' +
+                'The notification interface you specified is not available,\n or isn\'t being included before ' +
                 'VueMeteorErrorNotifier.\n\n' +
                 'See https://github.com/JorgenVatle/vue-meteor-error-notifier#notification-interfaces for more information.'
             )
