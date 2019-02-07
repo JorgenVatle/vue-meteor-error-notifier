@@ -45,4 +45,20 @@ export default class ErrorNotifier {
             message: this.error.messages.join('\n,'),
         })
     }
+
+    /**
+     * Emit a Buefy notification for the current error.
+     */
+    public notifyBuefy() {
+        this.error.messages.forEach((message: string) => {
+            // @ts-ignore
+            this.vue.$toast.open({
+                message,
+                position: 'is-top-right',
+                type: 'is-danger',
+                queue: false,
+                duration: 5000,
+            })
+        });
+    }
 }
