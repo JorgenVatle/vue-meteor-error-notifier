@@ -1,4 +1,4 @@
-interface MeteorError {
+export interface MeteorError {
     /**
      * Error description.
      */
