@@ -7,7 +7,7 @@ interface VueMeteorErrorNotificationOptions {
 }
 
 export default {
-    install(vue: Vue, { notifier = 'native' }: VueMeteorErrorNotificationOptions) {
+    install(vue: typeof Vue, { notifier = 'native' }: VueMeteorErrorNotificationOptions) {
         if (notifier === 'native') {
             console.warn(
                 'You\'re running VueMeteorErrorNotifier in `native` mode.\n' +
