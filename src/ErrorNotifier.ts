@@ -30,4 +30,19 @@ export default class ErrorNotifier {
     public notifyNative() {
         alert(this.error.messages.join('\n'));
     }
+
+    /**
+     * Emit SweetAlert notification for the current error.
+     */
+    public notifySweetalert() {
+        // @ts-ignore
+        this.vue.$swal({
+            type: 'error',
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 5000,
+            message: this.error.messages.join('\n,'),
+        })
+    }
 }
