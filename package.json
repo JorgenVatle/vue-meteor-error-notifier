@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/JorgenVatle/vue-meteor-error-notifier#readme",
   "dependencies": {
-    "typescript": "^2.1.6",
+    "typescript": "^2.9.2",
     "vue": "^2.6.3"
   }
 }
