@@ -23,12 +23,12 @@ interface MeteorError {
 export default class ErrorFormatter {
 
     /**
-     * Meteor error object
+     * Meteor error object.
      */
     private exception: MeteorError;
 
     /**
-     * Error formatter constructor
+     * Error formatter constructor.
      *
      * @param meteorError
      */
@@ -37,10 +37,25 @@ export default class ErrorFormatter {
     }
 
     /**
-     * Error reason
+     * Error reason.
      */
     public get reason() {
         return this.exception.reason;
+    }
+
+    /**
+     * Form validation error messages.
+     */
+    public get formErrors() {
+        if (typeof this.exception.details !== 'object') {
+            return [];
+        }
+
+        if (!this.exception.details.length) {
+            return [];
+        }
+
+        return this.exception.details.map((field) => field.message);
     }
 
     /**
