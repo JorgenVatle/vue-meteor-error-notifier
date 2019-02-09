@@ -50,7 +50,7 @@ export default class ErrorNotifier {
 
         if (messages.length > 1) {
             options.titleText = 'Oops!';
-            options.text = this.error.messages.join('\n,');
+            options.text = this.error.messages.join(',\n');
         }
 
         // @ts-ignore
